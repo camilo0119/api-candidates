@@ -1,0 +1,46 @@
+button {
+    font-family: 'Lato', sans-serif;
+}
+
+.icon-button {
+    padding: 0;
+    border: 0;
+    background-color: transparent;
+}
+
+.icon-button[aria-label="thumbs up"] {
+    background-color: rgba(var(--color-green-positive), .8);
+}
+
+.icon-button[aria-label="thumbs up"]:hover {
+    background-color: rgba(var(--color-green-positive), 1);
+}
+
+.icon-button[aria-label="thumbs down"] {
+    background-color: rgba(var(--color-yellow-negative), .8);
+}
+
+.icon-button[aria-label="thumbs down"]:hover {
+    background-color: rgba(var(--color-yellow-negative), 1);
+}
+
+.button__vote {
+    width: 50px;
+    margin: 0.5em;
+    height: 3.5em;
+}
+
+.button__vote > img {
+    height: 25px;
+    padding: 10px;
+}
+
+.button__vote-now {
+    width: 120px;
+    margin: 0.2em;
+    height: 2.5em;
+    font-size: 20px;
+    background-color: var(--color-darker-gray);
+    color: var(--color-white);
+    border: 1px solid var(--color-white);
+}

@@ -1,0 +1,104 @@
+.card__container {
+  padding: 1rem 1rem;
+}
+
+.card__align-left {
+    float: left;
+    text-align:left;
+    width: 25%;
+}
+
+.card__align-center {
+    float: left;
+    text-align:left;
+    width: 50%;
+}
+
+.card__align-right {
+    float: left;
+    text-align:right;
+    width: 20% !important;
+}
+
+.card__glass-background {
+  height: 200px;
+  margin: 22px;
+  background-color: grey;
+  position: relative;
+}
+
+.card__content-background_gradient {
+  width: 100%;
+  height: 100%;
+}
+
+.card__title_list {
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 10.5rem;
+  margin: 1rem 0;
+  -webkit-box-orient: vertical;
+  font-size: 2.25rem;
+  font-weight: 300;
+  -webkit-line-clamp: 6;
+  text-overflow: ellipsis;
+}
+
+.card__title {
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 10.5rem;
+  margin: 1rem 0;
+  -webkit-box-orient: vertical;
+  font-size: 2rem;
+  font-weight: 300;
+  -webkit-line-clamp: 6;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.card__description{
+  display: -webkit-box;
+  overflow: hidden;
+  max-height: 10.5rem;
+  margin: 0.5rem 0;
+  -webkit-box-orient: vertical;
+  font-size: 1rem;
+  font-weight: 300;
+  -webkit-line-clamp: 2;
+  text-overflow: ellipsis;
+  color: #fff;
+}
+
+.card__porcent {
+    height: 100%;
+    opacity: 0.5;
+}
+
+.card__winner {
+    background-color: var(--color-positive-opacity);
+    height: 67px;
+    text-align: left;
+}
+
+.card__loser {
+    background-color: var(--color-negative-opacity);
+    height: 67px;
+    text-align: right;
+}
+
+.card__results-statics {
+    color: var(--color-white);
+    font-size: 30px;
+}
+
+.card__results-resume {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.card__last-update {
+  color: var(--color-white);
+  font-size: 14px;
+}

@@ -21,10 +21,12 @@
 }
 
 .card__glass-background {
-  height: 200px;
+  height: 317px;
+  width: 352px;
   margin: 22px;
   background-color: grey;
-  position: relative;
+  background-repeat: no-repeat;
+  background-size: auto;
 }
 
 .card__content-background_gradient {
@@ -48,11 +50,10 @@
   display: -webkit-box;
   overflow: hidden;
   max-height: 10.5rem;
-  margin: 1rem 0;
   -webkit-box-orient: vertical;
   font-size: 2rem;
   font-weight: 300;
-  -webkit-line-clamp: 6;
+  -webkit-line-clamp: 2;
   text-overflow: ellipsis;
   color: #fff;
 }
@@ -77,22 +78,28 @@
 
 .card__winner {
     background-color: var(--color-positive-opacity);
-    height: 67px;
     text-align: left;
 }
 
 .card__loser {
     background-color: var(--color-negative-opacity);
-    height: 67px;
     text-align: right;
 }
 
 .card__results-statics {
     color: var(--color-white);
-    font-size: 30px;
+    font-size: 20px;
+    height: 40px;
+}
+
+.card__results-container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
 }
 
 .card__results-resume {
+  display: contents;
   position: absolute;
   bottom: 0;
   width: 100%;
@@ -101,4 +108,66 @@
 .card__last-update {
   color: var(--color-white);
   font-size: 14px;
+  padding: 0 10px;
+  text-align: end;
+}
+
+.card__scroll-auto {
+  flex-wrap: initial;
+  overflow: auto;
+}
+
+.card__icon-bar {
+  min-width: 90px;
+}
+
+.card__content {
+  position: absolute;
+  bottom: 0;
+}
+
+@media all and (min-width: 768px) {
+  .card__glass-background {
+    width: auto;
+    height: 185px;
+    background-size: 300px;
+  }
+  .card__results-resume {
+    position: relative;
+  }
+  .card__scroll-auto {
+    flex-wrap: wrap;
+  }
+}
+
+@media all and (min-width: 1100px) {
+  .card__glass-background {
+    width: auto;
+    height: 210px;
+    background-size: 300px;
+  }
+
+  .card__glass-background-grid {
+    height: 317px;
+    width: 352px;
+    margin: 22px;
+  }
+
+  .card__results-statics {
+    height: 65px;
+    font-size: 30px;
+  }
+
+  .card__results-statics-grid {
+    height: 35px !important;
+    font-size: 14px !important;
+  }
+
+  .card__results-resume {
+    position: relative;
+  }
+
+  .card__scroll-auto {
+    flex-wrap: wrap;
+  }
 }

@@ -1,0 +1,1 @@
+export const typeViewCards = ['List', 'Grid']

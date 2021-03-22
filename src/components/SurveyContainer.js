@@ -1,8 +1,17 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { CelebrityList } from "./celebrity/CelebrityList";
 import { Footer } from "./Footer";
+import { useDispatch} from 'react-redux';
+import { loadCandidates } from "../actions/candidates";
 
 export const SurveyContainer = () => {
+
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+      dispatch(loadCandidates())
+  }, [])
+
   return (
     <div className="max-centered">
       <aside

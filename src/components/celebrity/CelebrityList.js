@@ -1,20 +1,54 @@
 import React, {useState, useEffect} from "react";
 import { CelebrityCard } from "./CelebrityCard";
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { typeViewCards } from "../constanst/constants";
+import { deviceReducer } from "../../reducers/deviceReducer";
+import { setDesktopDevice, setMobileDevice } from "../../actions/device";
 
 
 export const CelebrityList = () => {
 
-
+    
     const {candidates} = useSelector(state => state.candidate)
     const [candidateList, setCandidateList] = useState([])
     const [presentationType, setPresentationType] = useState('List')
+    const [device, setDevice] = useState('')
 
+    const dispatch = useDispatch();
+    
     useEffect(() => {
         setCandidateList(candidates)
     }, [candidates])
 
+    useEffect(() => {
+        if (device === 'mobile') {
+            setPresentationType('List')
+        }
+        setDeviceStore()
+    }, [device])
+
+    const setDeviceStore = () => {
+        switch (device) {
+            case 'mobile':
+                dispatch(setMobileDevice())
+                break;
+            case 'desktop':
+                dispatch(setDesktopDevice())
+                break;
+            default:
+                break;
+        }
+    }
+    
+    const deviceDetect = () => {
+        if (window.innerWidth < 600) {
+            setDevice('mobile')
+        } else {
+            setDevice('desktop')
+        }
+    }
+    window.addEventListener('resize', deviceDetect)
+    
     const handleSelectTypeView = (e) => {
         setPresentationType(e.target.value)
     }
@@ -40,7 +74,7 @@ export const CelebrityList = () => {
             <div className="columns is-mobile card__scroll-auto is-gapless">
             {
                 candidateList?.map((candidate, idx) => (
-                    <div className={`column ${presentationType === 'List' ? 'is-full-desktop' : 'is-4' }`}>
+                    <div id={candidate.name} className={`column ${presentationType === 'List' ? 'is-full-desktop is-full-tablet' : 'is-4' }`}>
                         <CelebrityCard key={idx} {...candidate} typeView={presentationType}/>
                     </div>
                 ))

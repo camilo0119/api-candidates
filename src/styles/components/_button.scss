@@ -33,6 +33,7 @@ button {
 .button__vote-grid {
     width: 30px;
     height: 2em;
+    margin: 0.5em;
 }
 
 .button__vote > img {
@@ -48,4 +49,9 @@ button {
     background-color: var(--color-darker-gray);
     color: var(--color-white);
     border: 1px solid var(--color-white);
+}
+
+.button__vote-now-grid {
+    height: 35px;
+    font-size: 14px;
 }

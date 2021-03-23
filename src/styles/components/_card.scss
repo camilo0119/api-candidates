@@ -26,7 +26,7 @@
   margin: 22px;
   background-color: grey;
   background-repeat: no-repeat;
-  background-size: auto;
+  background-size: cover;
 }
 
 .card__content-background_gradient {
@@ -56,9 +56,10 @@
   -webkit-line-clamp: 2;
   text-overflow: ellipsis;
   color: #fff;
+  margin-left: 8px;
 }
 
-.card__description{
+.card__description {
   display: -webkit-box;
   overflow: hidden;
   max-height: 10.5rem;
@@ -69,6 +70,8 @@
   -webkit-line-clamp: 2;
   text-overflow: ellipsis;
   color: #fff;
+  margin-top: -20px;
+  margin-left: 35px;
 }
 
 .card__porcent {
@@ -108,8 +111,10 @@
 .card__last-update {
   color: var(--color-white);
   font-size: 14px;
-  padding: 0 10px;
+  padding: 0 20px;
   text-align: end;
+  line-height: 0.5em;
+  text-transform: capitalize !important;
 }
 
 .card__scroll-auto {
@@ -132,18 +137,29 @@
     height: 185px;
     background-size: 300px;
   }
+
   .card__results-resume {
     position: relative;
   }
+
   .card__scroll-auto {
     flex-wrap: wrap;
+  }
+
+  .card__title {
+    -webkit-line-clamp: 1;
+    margin-left: 0;
+  }
+
+  .card__description {
+    margin-left: 0;
   }
 }
 
 @media all and (min-width: 1100px) {
   .card__glass-background {
     width: auto;
-    height: 210px;
+    height: 170px;
     background-size: 300px;
   }
 
@@ -154,7 +170,7 @@
   }
 
   .card__results-statics {
-    height: 65px;
+    height: 52px;
     font-size: 30px;
   }
 
@@ -169,5 +185,14 @@
 
   .card__scroll-auto {
     flex-wrap: wrap;
+    overflow: hidden;
+  }
+
+  .card__title {
+    margin-left: 0;
+  }
+
+  .card__description {
+    margin-left: 0;
   }
 }

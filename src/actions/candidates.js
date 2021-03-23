@@ -34,7 +34,6 @@ export const loadCandidates = (uid) => {
                 ...candidate.data()
             })
         })
-        console.log(candidatesList)
         dispatch(setCandidates(candidatesList))
     }
 }

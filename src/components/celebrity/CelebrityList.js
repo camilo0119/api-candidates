@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import { CelebrityCard } from "./CelebrityCard";
 import { useDispatch, useSelector } from 'react-redux';
 import { typeViewCards } from "../constanst/constants";
-import { deviceReducer } from "../../reducers/deviceReducer";
 import { setDesktopDevice, setMobileDevice } from "../../actions/device";
 
 

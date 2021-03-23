@@ -107,6 +107,7 @@ export const CelebrityCard = (props) => {
                 src="assets/img/thumbs-up.svg"
                 width="30px"
                 style={{ paddingRight: 10 }}
+                alt="Positive vote"
               />
               {`${porcentPositive}%`}
             </div>
@@ -121,6 +122,7 @@ export const CelebrityCard = (props) => {
               {`${porcentNegative}%`}
               <img
                 src="assets/img/thumbs-down.svg"
+                alt="Negative vote"
                 width="30px"
                 style={{ paddingLeft: 10 }}
               />

@@ -14,6 +14,10 @@ export const CelebrityList = () => {
     const [device, setDevice] = useState('')
 
     const dispatch = useDispatch();
+
+    useEffect(() => {
+        deviceDetect()
+    }, [])
     
     useEffect(() => {
         setCandidateList(candidates)

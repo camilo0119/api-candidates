@@ -10,15 +10,15 @@ export const CelebrityCard = (props) => {
   const porcentPositive = ((positive / totalVotes) * 100).toFixed(1);
   const porcentNegative = ((negative / totalVotes) * 100).toFixed(1);
   const positiveImage = porcentPositive > porcentNegative;
-
+  
   const styles = {
     backgroundStyle: {
       backgroundImage: `linear-gradient(270deg, rgb(128 128 128 / 98%) 8%, rgb(0 0 0 / 22%) 46%), url(assets/img/${picture})`,
       position: "relative",
-      backgroundSize: `${gridView && 'cover'}`
+      backgroundSize: `${gridView ? 'cover' : ''}`
     },
   };
-
+  
   return (
     <div
       className={`card__glass-background ${
